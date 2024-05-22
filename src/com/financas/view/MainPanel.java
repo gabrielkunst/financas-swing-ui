@@ -27,8 +27,9 @@ public class MainPanel extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jInternalFrame1 = new javax.swing.JInternalFrame();
+        MainView = new javax.swing.JDesktopPane();
+        CadastrarView = new javax.swing.JInternalFrame();
+        LoginView = new javax.swing.JInternalFrame();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -36,43 +37,78 @@ public class MainPanel extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Minhas Finanças");
-        getContentPane().setLayout(new java.awt.GridLayout());
+        getContentPane().setLayout(new java.awt.GridLayout(1, 0));
 
-        jInternalFrame1.setResizable(true);
-        jInternalFrame1.setMinimumSize(new java.awt.Dimension(0, 0));
-        jInternalFrame1.setVisible(true);
+        CadastrarView.setClosable(true);
+        CadastrarView.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        CadastrarView.setIconifiable(true);
+        CadastrarView.setResizable(true);
+        CadastrarView.setTitle("Cadastrar");
+        CadastrarView.setMinimumSize(new java.awt.Dimension(0, 0));
+        CadastrarView.setVisible(false);
 
-        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
-        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
-        jInternalFrame1Layout.setHorizontalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 904, Short.MAX_VALUE)
+        javax.swing.GroupLayout CadastrarViewLayout = new javax.swing.GroupLayout(CadastrarView.getContentPane());
+        CadastrarView.getContentPane().setLayout(CadastrarViewLayout);
+        CadastrarViewLayout.setHorizontalGroup(
+            CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
-        jInternalFrame1Layout.setVerticalGroup(
-            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 475, Short.MAX_VALUE)
+        CadastrarViewLayout.setVerticalGroup(
+            CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jDesktopPane1.setLayer(jInternalFrame1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        LoginView.setClosable(true);
+        LoginView.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        LoginView.setIconifiable(true);
+        LoginView.setResizable(true);
+        LoginView.setTitle("Login");
+        LoginView.setMinimumSize(new java.awt.Dimension(0, 0));
+        LoginView.setPreferredSize(new java.awt.Dimension(789, 620));
+        LoginView.setVisible(true);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDesktopPane1Layout.createSequentialGroup()
+        javax.swing.GroupLayout LoginViewLayout = new javax.swing.GroupLayout(LoginView.getContentPane());
+        LoginView.getContentPane().setLayout(LoginViewLayout);
+        LoginViewLayout.setHorizontalGroup(
+            LoginViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 700, Short.MAX_VALUE)
+        );
+        LoginViewLayout.setVerticalGroup(
+            LoginViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 589, Short.MAX_VALUE)
+        );
+
+        MainView.setLayer(CadastrarView, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        MainView.setLayer(LoginView, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout MainViewLayout = new javax.swing.GroupLayout(MainView);
+        MainView.setLayout(MainViewLayout);
+        MainViewLayout.setHorizontalGroup(
+            MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainViewLayout.createSequentialGroup()
+                .addContainerGap(474, Short.MAX_VALUE)
+                .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(475, Short.MAX_VALUE))
+            .addGroup(MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MainViewLayout.createSequentialGroup()
+                    .addContainerGap(118, Short.MAX_VALUE)
+                    .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE)
+                    .addContainerGap(119, Short.MAX_VALUE)))
+        );
+        MainViewLayout.setVerticalGroup(
+            MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(MainViewLayout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(jInternalFrame1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(80, 80, 80))
-        );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDesktopPane1Layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(jInternalFrame1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(80, 80, 80))
+            .addGroup(MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(MainViewLayout.createSequentialGroup()
+                    .addGap(80, 80, 80)
+                    .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGap(80, 80, 80)))
         );
 
-        getContentPane().add(jDesktopPane1);
+        getContentPane().add(MainView);
 
         jMenu1.setText("Cadastrar");
         jMenuBar1.add(jMenu1);
@@ -124,8 +160,9 @@ public class MainPanel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JInternalFrame jInternalFrame1;
+    private javax.swing.JInternalFrame CadastrarView;
+    private javax.swing.JInternalFrame LoginView;
+    private javax.swing.JDesktopPane MainView;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
