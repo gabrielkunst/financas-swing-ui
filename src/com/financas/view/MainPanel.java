@@ -28,8 +28,8 @@ public class MainPanel extends javax.swing.JFrame {
     private void initComponents() {
 
         MainView = new javax.swing.JDesktopPane();
-        CadastrarView = new javax.swing.JInternalFrame();
         LoginView = new javax.swing.JInternalFrame();
+        CadastrarView = new javax.swing.JInternalFrame();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -38,25 +38,6 @@ public class MainPanel extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Minhas Finanças");
         getContentPane().setLayout(new java.awt.GridLayout(1, 0));
-
-        CadastrarView.setClosable(true);
-        CadastrarView.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        CadastrarView.setIconifiable(true);
-        CadastrarView.setResizable(true);
-        CadastrarView.setTitle("Cadastrar");
-        CadastrarView.setMinimumSize(new java.awt.Dimension(0, 0));
-        CadastrarView.setVisible(false);
-
-        javax.swing.GroupLayout CadastrarViewLayout = new javax.swing.GroupLayout(CadastrarView.getContentPane());
-        CadastrarView.getContentPane().setLayout(CadastrarViewLayout);
-        CadastrarViewLayout.setHorizontalGroup(
-            CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        CadastrarViewLayout.setVerticalGroup(
-            CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
         LoginView.setClosable(true);
         LoginView.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
@@ -71,40 +52,60 @@ public class MainPanel extends javax.swing.JFrame {
         LoginView.getContentPane().setLayout(LoginViewLayout);
         LoginViewLayout.setHorizontalGroup(
             LoginViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 700, Short.MAX_VALUE)
+            .addGap(0, 829, Short.MAX_VALUE)
         );
         LoginViewLayout.setVerticalGroup(
             LoginViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 589, Short.MAX_VALUE)
+            .addGap(0, 504, Short.MAX_VALUE)
         );
 
-        MainView.setLayer(CadastrarView, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        CadastrarView.setClosable(true);
+        CadastrarView.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        CadastrarView.setIconifiable(true);
+        CadastrarView.setResizable(true);
+        CadastrarView.setTitle("Cadastrar");
+        CadastrarView.setMinimumSize(new java.awt.Dimension(0, 0));
+        CadastrarView.setPreferredSize(new java.awt.Dimension(789, 620));
+        CadastrarView.setVisible(true);
+
+        javax.swing.GroupLayout CadastrarViewLayout = new javax.swing.GroupLayout(CadastrarView.getContentPane());
+        CadastrarView.getContentPane().setLayout(CadastrarViewLayout);
+        CadastrarViewLayout.setHorizontalGroup(
+            CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 829, Short.MAX_VALUE)
+        );
+        CadastrarViewLayout.setVerticalGroup(
+            CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 504, Short.MAX_VALUE)
+        );
+
         MainView.setLayer(LoginView, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        MainView.setLayer(CadastrarView, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout MainViewLayout = new javax.swing.GroupLayout(MainView);
         MainView.setLayout(MainViewLayout);
         MainViewLayout.setHorizontalGroup(
             MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainViewLayout.createSequentialGroup()
-                .addContainerGap(474, Short.MAX_VALUE)
-                .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap(475, Short.MAX_VALUE))
+                .addContainerGap(80, Short.MAX_VALUE)
+                .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                .addContainerGap(80, Short.MAX_VALUE))
             .addGroup(MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MainViewLayout.createSequentialGroup()
-                    .addContainerGap(118, Short.MAX_VALUE)
-                    .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, 712, Short.MAX_VALUE)
-                    .addContainerGap(119, Short.MAX_VALUE)))
+                    .addContainerGap(80, Short.MAX_VALUE)
+                    .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
+                    .addContainerGap(80, Short.MAX_VALUE)))
         );
         MainViewLayout.setVerticalGroup(
             MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainViewLayout.createSequentialGroup()
                 .addGap(80, 80, 80)
-                .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
                 .addGap(80, 80, 80))
             .addGroup(MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MainViewLayout.createSequentialGroup()
                     .addGap(80, 80, 80)
-                    .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, 535, Short.MAX_VALUE)
                     .addGap(80, 80, 80)))
         );
 
