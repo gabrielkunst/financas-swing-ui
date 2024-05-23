@@ -29,7 +29,9 @@ public class MainPanel extends javax.swing.JFrame {
 
         MainView = new javax.swing.JDesktopPane();
         LoginView = new javax.swing.JInternalFrame();
+        LoginPanelView = new javax.swing.JPanel();
         CadastrarView = new javax.swing.JInternalFrame();
+        CadastrarPanelView = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -44,19 +46,37 @@ public class MainPanel extends javax.swing.JFrame {
         LoginView.setIconifiable(true);
         LoginView.setResizable(true);
         LoginView.setTitle("Login");
+        LoginView.setToolTipText("");
         LoginView.setMinimumSize(new java.awt.Dimension(0, 0));
         LoginView.setPreferredSize(new java.awt.Dimension(789, 620));
         LoginView.setVisible(true);
+
+        javax.swing.GroupLayout LoginPanelViewLayout = new javax.swing.GroupLayout(LoginPanelView);
+        LoginPanelView.setLayout(LoginPanelViewLayout);
+        LoginPanelViewLayout.setHorizontalGroup(
+            LoginPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 359, Short.MAX_VALUE)
+        );
+        LoginPanelViewLayout.setVerticalGroup(
+            LoginPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 424, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout LoginViewLayout = new javax.swing.GroupLayout(LoginView.getContentPane());
         LoginView.getContentPane().setLayout(LoginViewLayout);
         LoginViewLayout.setHorizontalGroup(
             LoginViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 829, Short.MAX_VALUE)
+            .addGroup(LoginViewLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(LoginPanelView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(40, 40, 40))
         );
         LoginViewLayout.setVerticalGroup(
             LoginViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGroup(LoginViewLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(LoginPanelView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(40, 40, 40))
         );
 
         CadastrarView.setClosable(true);
@@ -68,15 +88,32 @@ public class MainPanel extends javax.swing.JFrame {
         CadastrarView.setPreferredSize(new java.awt.Dimension(789, 620));
         CadastrarView.setVisible(true);
 
+        javax.swing.GroupLayout CadastrarPanelViewLayout = new javax.swing.GroupLayout(CadastrarPanelView);
+        CadastrarPanelView.setLayout(CadastrarPanelViewLayout);
+        CadastrarPanelViewLayout.setHorizontalGroup(
+            CadastrarPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 359, Short.MAX_VALUE)
+        );
+        CadastrarPanelViewLayout.setVerticalGroup(
+            CadastrarPanelViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 424, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout CadastrarViewLayout = new javax.swing.GroupLayout(CadastrarView.getContentPane());
         CadastrarView.getContentPane().setLayout(CadastrarViewLayout);
         CadastrarViewLayout.setHorizontalGroup(
             CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 829, Short.MAX_VALUE)
+            .addGroup(CadastrarViewLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(CadastrarPanelView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(40, 40, 40))
         );
         CadastrarViewLayout.setVerticalGroup(
             CadastrarViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 504, Short.MAX_VALUE)
+            .addGroup(CadastrarViewLayout.createSequentialGroup()
+                .addGap(40, 40, 40)
+                .addComponent(CadastrarPanelView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(40, 40, 40))
         );
 
         MainView.setLayer(LoginView, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -87,14 +124,14 @@ public class MainPanel extends javax.swing.JFrame {
         MainViewLayout.setHorizontalGroup(
             MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MainViewLayout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(LoginView, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(MainViewLayout.createSequentialGroup()
-                    .addContainerGap(80, Short.MAX_VALUE)
-                    .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, 841, Short.MAX_VALUE)
-                    .addContainerGap(80, Short.MAX_VALUE)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(CadastrarView, javax.swing.GroupLayout.DEFAULT_SIZE, 451, Short.MAX_VALUE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         MainViewLayout.setVerticalGroup(
             MainViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -170,7 +207,9 @@ public class MainPanel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel CadastrarPanelView;
     private javax.swing.JInternalFrame CadastrarView;
+    private javax.swing.JPanel LoginPanelView;
     private javax.swing.JInternalFrame LoginView;
     private javax.swing.JDesktopPane MainView;
     private javax.swing.JMenu jMenu1;
